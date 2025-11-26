@@ -61,28 +61,6 @@ O **Audoção** é uma plataforma frontend desenvolvida para facilitar o process
 }
 ```
 
-## 🏛️ Arquitetura
-
-O projeto segue os princípios da **Clean Architecture**, organizando o código em camadas:
-
-```
-src/
-├── app/                      # Next.js App Router (Rotas)
-├── domain/                   # Entidades e Regras de Negócio
-├── application/              # Casos de Uso e Interfaces
-├── infrastructure/           # Implementações (Repositories, APIs)
-├── presentation/             # Componentes UI e Hooks
-└── shared/                   # Utilitários Compartilhados
-```
-
-### Princípios SOLID Aplicados
-
-- **S**ingle Responsibility: Cada componente/função tem uma única responsabilidade
-- **O**pen/Closed: Extensível via props e interfaces
-- **L**iskov Substitution: Implementações mock substituem interfaces
-- **I**nterface Segregation: Interfaces específicas por domínio
-- **D**ependency Inversion: Dependência de abstrações, não implementações
-
 ## 📦 Pré-requisitos
 
 Antes de começar, certifique-se de ter instalado:
@@ -333,20 +311,6 @@ Senha: Senha123!
 - **Constantes**: UPPER_SNAKE_CASE (`MAX_FILE_SIZE`)
 - **Interfaces**: PascalCase com prefixo "I" (`IUserRepository`)
 
-#### Commits Semânticos
-
-Siga o padrão [Conventional Commits](https://www.conventionalcommits.org/):
-
-```
-feat: adiciona nova funcionalidade
-fix: corrige bug
-docs: atualiza documentação
-style: formatação de código
-refactor: refatoração sem mudança de funcionalidade
-test: adiciona ou atualiza testes
-chore: tarefas de manutenção
-```
-
 ### Adicionando Novos Componentes
 
 ```bash
@@ -366,39 +330,6 @@ import { Button } from '@/presentation/components/atoms/Button';
 import { User } from '@/shared/types';
 import { validateCPF } from '@/shared/utils/validators';
 ```
-
-## 🚀 Build e Deploy
-
-### Build de Produção
-
-```bash
-# Gerar build otimizado
-npm run build
-
-# Testar build localmente
-npm start
-```
-
-### Deploy na Vercel (Recomendado)
-
-1. Criar conta na [Vercel](https://vercel.com/)
-2. Conectar repositório GitHub
-3. Deploy automático em cada push
-
-```bash
-# Ou via CLI
-npm i -g vercel
-vercel
-```
-
-### Deploy em Outros Serviços
-
-O projeto Next.js pode ser deployado em:
-
-- **Netlify**: Suporte nativo para Next.js
-- **AWS Amplify**: Com configuração Next.js
-- **Railway**: Deploy simples via GitHub
-- **DigitalOcean App Platform**: Suporte Next.js
 
 ### Variáveis de Ambiente
 
@@ -458,16 +389,6 @@ Font Sizes: 12px, 14px, 16px, 20px, 24px, 28px, 32px, 48px
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Ant Design](https://ant.design/)
 - [TypeScript](https://www.typescriptlang.org/docs/)
-- [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-- [SOLID Principles](https://en.wikipedia.org/wiki/SOLID)
-
-## 🤝 Contribuindo
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'feat: add amazing feature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
 
 ## 📝 Licença
 
@@ -476,7 +397,3 @@ Este projeto é um protótipo educacional.
 ## 👨‍💻 Autor
 
 Desenvolvido como parte do projeto Audoção
-
----
-
-**Feito com 💙 para ajudar animais a encontrarem um lar**
