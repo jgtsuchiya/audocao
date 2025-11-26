@@ -1,0 +1,99 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1890ff 0%, #52c41a 100%);
+  padding: 24px;
+}
+
+.content {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 64px 48px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.iconWrapper {
+  margin-bottom: 32px;
+}
+
+.icon {
+  font-size: 96px;
+  color: #52c41a;
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #262626;
+}
+
+.message {
+  font-size: 18px;
+  color: #262626;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.submessage {
+  font-size: 16px;
+  color: #595959;
+  line-height: 1.6;
+  margin-bottom: 48px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.info {
+  padding-top: 32px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.infoText {
+  font-size: 14px;
+  color: #595959;
+}
+
+@media (max-width: 576px) {
+  .content {
+    padding: 48px 24px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .icon {
+    font-size: 72px;
+  }
+
+  .message {
+    font-size: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
