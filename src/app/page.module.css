@@ -1,0 +1,164 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  color: #1890ff;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+.main {
+  flex: 1;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1890ff 0%, #52c41a 100%);
+  padding: 80px 24px;
+  color: white;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 20px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.heroActions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.features {
+  padding: 80px 24px;
+  background: white;
+}
+
+.featuresTitle {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: #262626;
+}
+
+.featureGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.featureCard {
+  padding: 32px;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.featureIcon {
+  margin-bottom: 24px;
+}
+
+.featureCardTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #262626;
+}
+
+.featureCardDescription {
+  font-size: 16px;
+  color: #595959;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.footer {
+  background: #262626;
+  color: white;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerText {
+  margin: 8px 0;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .heroSubtitle {
+    font-size: 16px;
+  }
+
+  .featuresTitle {
+    font-size: 28px;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
