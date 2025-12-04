@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   title: 'Audoção - Sistema de Adoção de Animais',
   description: 'Conectando animais a lares amorosos',
   keywords: 'adoção, animais, pets, cães, gatos',
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

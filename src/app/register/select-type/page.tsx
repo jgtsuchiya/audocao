@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/presentation/components/atoms/Button';
+import { Logo } from '@/presentation/components/atoms/Logo';
 import { HeartOutlined, HomeOutlined } from '@ant-design/icons';
 import styles from './page.module.css';
 
@@ -22,8 +23,8 @@ export default function SelectTypePage() {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <Link href="/" className={styles.logo}>
-          🐾 Audoção
+        <Link href="/" className={styles.logoLink}>
+          <Logo size="medium" variant="both" />
         </Link>
 
         <h1 className={styles.title}>Como você deseja se cadastrar?</h1>

@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ['antd'],
   images: {
-    domains: [],
+    domains: ['images.unsplash.com'],
   },
 };
 

@@ -32,6 +32,27 @@
 .nav {
   display: flex;
   gap: 16px;
+  align-items: center;
+}
+
+.navLink {
+  color: #262626;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.navLink:hover {
+  color: #1890ff;
+  background-color: #f0f5ff;
+}
+
+.navLink:focus-visible {
+  outline: 2px solid #1890ff;
+  outline-offset: 2px;
 }
 
 .main {
@@ -68,6 +89,7 @@
   display: flex;
   gap: 16px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .features {

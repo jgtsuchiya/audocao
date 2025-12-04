@@ -1,0 +1,81 @@
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.logoText {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #1890ff;
+  letter-spacing: -0.5px;
+}
+
+.dogIcon,
+.catIcon {
+  width: 40px;
+  height: 40px;
+  color: #1890ff;
+  transition: all 0.3s ease;
+}
+
+.catIcon {
+  color: #fa8c16;
+}
+
+.logoContainer:hover .dogIcon {
+  transform: scale(1.1) rotate(-5deg);
+  color: #096dd9;
+}
+
+.logoContainer:hover .catIcon {
+  transform: scale(1.1) rotate(5deg);
+  color: #d46b08;
+}
+
+/* Size variants */
+.small .dogIcon,
+.small .catIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.small .logoText {
+  font-size: 1rem;
+}
+
+.medium .dogIcon,
+.medium .catIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.medium .logoText {
+  font-size: 1.5rem;
+}
+
+.large .dogIcon,
+.large .catIcon {
+  width: 60px;
+  height: 60px;
+}
+
+.large .logoText {
+  font-size: 2rem;
+}
+
+/* Animation for both icons */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.logoContainer:hover .dogIcon,
+.logoContainer:hover .catIcon {
+  animation: float 2s ease-in-out infinite;
+}

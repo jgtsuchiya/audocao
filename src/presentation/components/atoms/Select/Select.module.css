@@ -1,0 +1,27 @@
+.selectWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #262626;
+}
+
+.required {
+  color: #ff4d4f;
+  margin-left: 4px;
+}
+
+.select {
+  width: 100%;
+}
+
+.error {
+  font-size: 12px;
+  color: #ff4d4f;
+  margin-top: 2px;
+}

@@ -1,0 +1,198 @@
+.container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 40px 24px;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 48px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.successIcon {
+  font-size: 72px;
+  color: #52c41a;
+}
+
+.result {
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #595959;
+  line-height: 1.8;
+}
+
+.subtitle p {
+  margin: 8px 0;
+}
+
+.nextSteps {
+  margin: 32px 0;
+  padding: 24px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  border-left: 4px solid #1890ff;
+}
+
+.stepsTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: #262626;
+}
+
+.stepsList {
+  margin: 0;
+  padding-left: 24px;
+  list-style: none;
+  counter-reset: step-counter;
+}
+
+.step {
+  margin-bottom: 16px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #595959;
+  counter-increment: step-counter;
+  position: relative;
+}
+
+.step::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: -32px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #1890ff;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.step strong {
+  color: #262626;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tips {
+  margin: 32px 0;
+  padding: 24px;
+  background-color: #fffbe6;
+  border-radius: 8px;
+  border-left: 4px solid #faad14;
+}
+
+.tipsTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: #262626;
+}
+
+.tipsList {
+  margin: 0;
+  padding-left: 24px;
+  list-style: disc;
+}
+
+.tipsList li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #595959;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.actions button {
+  min-width: 180px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+  }
+
+  .content {
+    padding: 32px 16px;
+  }
+
+  .successIcon {
+    font-size: 56px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .nextSteps,
+  .tips {
+    padding: 16px;
+  }
+
+  .stepsTitle {
+    font-size: 18px;
+  }
+
+  .tipsTitle {
+    font-size: 16px;
+  }
+
+  .stepsList {
+    padding-left: 16px;
+  }
+
+  .step::before {
+    left: -24px;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}
+
+/* Acessibilidade */
+button:focus-visible {
+  outline: 2px solid #1890ff;
+  outline-offset: 2px;
+}

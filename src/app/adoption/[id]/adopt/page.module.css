@@ -1,0 +1,193 @@
+.container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.header {
+  background: white;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.backButton {
+  color: #1890ff;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.formCard {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.animalInfo {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #262626;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #595959;
+  margin: 0;
+}
+
+.subtitle strong {
+  color: #1890ff;
+}
+
+.alert {
+  margin-bottom: 32px;
+}
+
+.form {
+  width: 100%;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: #262626;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.cepLoading {
+  display: block;
+  font-size: 12px;
+  color: #1890ff;
+  margin-top: 4px;
+}
+
+.radioSection {
+  margin-bottom: 16px;
+}
+
+.radioLabel {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #262626;
+  margin-bottom: 8px;
+}
+
+.required {
+  color: #ff4d4f;
+  margin-left: 4px;
+}
+
+.checkboxGroup {
+  margin-bottom: 16px;
+}
+
+.checkboxError {
+  color: #ff4d4f;
+}
+
+.error {
+  display: block;
+  font-size: 12px;
+  color: #ff4d4f;
+  margin-top: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  padding-top: 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.actions button {
+  min-width: 150px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .content {
+    padding: 16px;
+  }
+
+  .formCard {
+    padding: 24px 16px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}
+
+/* Acessibilidade */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 2px solid #1890ff;
+  outline-offset: 2px;
+}
+
+[aria-invalid="true"] {
+  border-color: #ff4d4f;
+}
+
+/* Estados de hover para melhor feedback */
+.checkboxGroup:hover {
+  opacity: 0.85;
+}
+
+/* Animações suaves */
+.section {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

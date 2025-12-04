@@ -93,3 +93,36 @@ export const INFO_MESSAGES = {
     'A senha deve ter no mínimo 8 caracteres, incluindo letras maiúsculas, minúsculas, números e caracteres especiais',
   'cep.loading': 'Buscando endereço...',
 };
+
+// Animal-related constants
+export const ANIMAL_TYPES = [
+  { value: 'dog', label: 'Cachorro' },
+  { value: 'cat', label: 'Gato' },
+  { value: 'other', label: 'Outros' },
+];
+
+export const ANIMAL_AGES = [
+  { value: 'puppy', label: 'Filhote' },
+  { value: 'adult', label: 'Adulto' },
+  { value: 'senior', label: 'Idoso' },
+];
+
+export const ANIMAL_SIZES = [
+  { value: 'small', label: 'Pequeno' },
+  { value: 'medium', label: 'Médio' },
+  { value: 'large', label: 'Grande' },
+];
+
+export const ANIMAL_GENDERS = [
+  { value: 'male', label: 'Macho' },
+  { value: 'female', label: 'Fêmea' },
+];
+
+export const INCOME_RANGES = [
+  { value: 'up_to_1500', label: 'Até R$ 1.500,00' },
+  { value: '1501_to_3000', label: 'De R$ 1.501,00 a R$ 3.000,00' },
+  { value: '3001_to_5000', label: 'De R$ 3.001,00 a R$ 5.000,00' },
+  { value: '5001_to_10000', label: 'De R$ 5.001,00 a R$ 10.000,00' },
+  { value: 'above_10000', label: 'Acima de R$ 10.000,00' },
+];
+

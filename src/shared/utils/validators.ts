@@ -152,3 +152,15 @@ export const validateTerms = (accepted: boolean): string | null => {
   if (!accepted) return ERROR_MESSAGES['terms.required'];
   return null;
 };
+
+export const validateMinLength = (value: string, minLength: number): string | null => {
+  if (!value) return ERROR_MESSAGES.required;
+  if (value.length < minLength) return `Mínimo de ${minLength} caracteres`;
+  return null;
+};
+
+export const validateMaxLength = (value: string, maxLength: number): string | null => {
+  if (value.length > maxLength) return `Máximo de ${maxLength} caracteres`;
+  return null;
+};
+

@@ -146,3 +146,79 @@ export interface AuthToken {
   userId: string;
   userType: UserType;
 }
+
+// Animal Types
+export type AnimalType = 'dog' | 'cat' | 'other';
+export type AnimalAge = 'puppy' | 'adult' | 'senior';
+export type AnimalSize = 'small' | 'medium' | 'large';
+export type AnimalGender = 'male' | 'female';
+export type AnimalStatus = 'available' | 'in_process' | 'adopted';
+
+export interface Animal {
+  id: string;
+  name: string;
+  type: AnimalType;
+  breed: string;
+  age: AnimalAge;
+  ageInYears: number;
+  size: AnimalSize;
+  gender: AnimalGender;
+  status: AnimalStatus;
+  photo: string;
+  description: string;
+  healthInfo: string;
+  adoptionProcess: string;
+  personality: string[];
+  vaccinated: boolean;
+  neutered: boolean;
+  specialNeeds?: string;
+  donorId: string;
+  createdAt: Date;
+}
+
+export interface AnimalFilters {
+  type?: AnimalType;
+  age?: AnimalAge;
+  size?: AnimalSize;
+  gender?: AnimalGender;
+}
+
+// Adoption Request Types
+export interface AdoptionRequest {
+  id: string;
+  animalId: string;
+  adopterName: string;
+  adopterEmail: string;
+  adopterPhone: string;
+  adopterAddress: Address;
+  adoptionReason: string;
+  monthlyIncome: string;
+  hasChildren: boolean;
+  childrenAges?: string;
+  hasExperience: boolean;
+  experienceDetails?: string;
+  allResidentsAgree: boolean;
+  status: 'pending' | 'approved' | 'rejected';
+  createdAt: Date;
+}
+
+export interface AdoptionRequestFormData {
+  name: string;
+  email: string;
+  phone: string;
+  cep: string;
+  street: string;
+  number: string;
+  complement?: string;
+  neighborhood: string;
+  city: string;
+  state: string;
+  adoptionReason: string;
+  monthlyIncome: string;
+  hasChildren: boolean;
+  childrenAges?: string;
+  hasExperience: boolean;
+  experienceDetails?: string;
+  allResidentsAgree: boolean;
+  acceptTerms: boolean;
+}

@@ -2,8 +2,16 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { HeartOutlined, HomeOutlined, InfoCircleOutlined } from '@ant-design/icons';
+import { 
+  HeartOutlined, 
+  HomeOutlined, 
+  InfoCircleOutlined,
+  SafetyOutlined,
+  SmileOutlined,
+  CheckCircleOutlined
+} from '@ant-design/icons';
 import { Button } from '@/presentation/components/atoms/Button';
+import { Logo } from '@/presentation/components/atoms/Logo';
 import styles from './page.module.css';
 
 export default function HomePage() {
@@ -11,8 +19,12 @@ export default function HomePage() {
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.headerContent}>
-          <h1 className={styles.logo}>🐾 Audoção</h1>
+          <Logo size="medium" variant="both" />
           <nav className={styles.nav}>
+            <Link href="/adoption" className={styles.navLink}>
+              <HeartOutlined style={{ marginRight: 4 }} />
+              Adote
+            </Link>
             <Link href="/login">
               <Button variant="secondary">Entrar</Button>
             </Link>
@@ -34,9 +46,14 @@ export default function HomePage() {
               animal que precisa de amor
             </p>
             <div className={styles.heroActions}>
-              <Link href="/register/select-type">
+              <Link href="/adoption">
                 <Button size="large" variant="primary">
-                  Começar agora
+                  Ver Animais para Adoção
+                </Button>
+              </Link>
+              <Link href="/register/select-type">
+                <Button size="large" variant="secondary">
+                  Cadastrar-se
                 </Button>
               </Link>
             </div>
@@ -48,14 +65,14 @@ export default function HomePage() {
           <div className={styles.featureGrid}>
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>
-                <HeartOutlined style={{ fontSize: 48, color: '#1890ff' }} />
+                <HeartOutlined style={{ fontSize: 48, color: '#ff4d4f' }} />
               </div>
               <h3 className={styles.featureCardTitle}>Adotar um animal</h3>
               <p className={styles.featureCardDescription}>
                 Encontre seu novo melhor amigo entre diversos animais disponíveis para adoção.
                 Filtre por espécie, idade, tamanho e localização.
               </p>
-              <Link href="/register/select-type">
+              <Link href="/adoption">
                 <Button variant="tertiary">Quero adotar →</Button>
               </Link>
             </div>
@@ -76,12 +93,12 @@ export default function HomePage() {
 
             <div className={styles.featureCard}>
               <div className={styles.featureIcon}>
-                <InfoCircleOutlined style={{ fontSize: 48, color: '#faad14' }} />
+                <SafetyOutlined style={{ fontSize: 48, color: '#1890ff' }} />
               </div>
-              <h3 className={styles.featureCardTitle}>Sobre o projeto</h3>
+              <h3 className={styles.featureCardTitle}>Adoção Responsável</h3>
               <p className={styles.featureCardDescription}>
-                Nossa missão é facilitar o processo de adoção responsável, conectando doadores e
-                adotantes de forma segura e transparente.
+                Processo seguro e transparente, garantindo o bem-estar dos animais e a
+                responsabilidade dos adotantes.
               </p>
               <Button variant="tertiary">Saiba mais →</Button>
             </div>
@@ -91,11 +108,13 @@ export default function HomePage() {
 
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
+          <Logo size="small" variant="both" />
           <p className={styles.footerText}>
             © {new Date().getFullYear()} Audoção. Todos os direitos reservados.
           </p>
           <p className={styles.footerText}>
-            Desenvolvido com 💙 para ajudar animais a encontrarem um lar
+            <HeartOutlined style={{ color: '#ff4d4f', marginRight: 4 }} />
+            Desenvolvido com amor para ajudar animais a encontrarem um lar
           </p>
         </div>
       </footer>
