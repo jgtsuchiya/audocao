@@ -61,6 +61,35 @@ export const Input: React.FC<InputProps> = ({
   );
 };
 
-export const InputPassword: React.FC<Omit<InputProps, 'type'>> = (props) => {
-  return <Input {...props} type="password" />;
+export const InputPassword: React.FC<Omit<InputProps, 'type'>> = ({
+  label,
+  error,
+  required,
+  onChange,
+  className,
+  ...props
+}) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (onChange) {
+      onChange(e.target.value);
+    }
+  };
+
+  return (
+    <div className={styles.inputWrapper}>
+      {label && (
+        <label className={styles.label}>
+          {label}
+          {required && <span className={styles.required}>*</span>}
+        </label>
+      )}
+      <AntInput.Password
+        {...props}
+        onChange={handleChange}
+        status={error ? 'error' : undefined}
+        className={`${styles.input} ${className || ''}`}
+      />
+      {error && <span className={styles.error}>{error}</span>}
+    </div>
+  );
 };

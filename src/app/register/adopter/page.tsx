@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Input } from '@/presentation/components/atoms/Input';
+import { Input, InputPassword } from '@/presentation/components/atoms/Input';
 import { Button } from '@/presentation/components/atoms/Button';
 import { Select, Checkbox, message } from 'antd';
 import { MockUserRepository } from '@/infrastructure/repositories/mock/MockUserRepository';
@@ -369,17 +369,15 @@ export default function RegisterAdopterPage() {
                 required
                 onChange={(value) => handleChange('emailConfirmation', value)}
               />
-              <Input
+              <InputPassword
                 label="Senha"
-                type="password"
                 value={formData.password}
                 error={errors.password}
                 required
                 onChange={(value) => handleChange('password', value)}
               />
-              <Input
+              <InputPassword
                 label="Confirme a senha"
-                type="password"
                 value={formData.passwordConfirmation}
                 error={errors.passwordConfirmation}
                 required

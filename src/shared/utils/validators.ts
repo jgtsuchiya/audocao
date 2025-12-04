@@ -117,13 +117,29 @@ export const validateCNPJ = (cnpj: string): string | null => {
 
 export const validatePhone = (phone: string): string | null => {
   if (!phone) return ERROR_MESSAGES.required;
-  if (!PHONE_REGEX.test(phone)) return ERROR_MESSAGES['phone.invalid'];
+  
+  // Remove caracteres de formatação para validar apenas os dígitos
+  const cleanPhone = phone.replace(/\D/g, '');
+  
+  // Valida se tem 10 (telefone fixo) ou 11 (celular) dígitos
+  if (cleanPhone.length < 10 || cleanPhone.length > 11) {
+    return ERROR_MESSAGES['phone.invalid'];
+  }
+  
   return null;
 };
 
 export const validateCEP = (cep: string): string | null => {
   if (!cep) return ERROR_MESSAGES.required;
-  if (!CEP_REGEX.test(cep)) return ERROR_MESSAGES['cep.invalid'];
+  
+  // Remove caracteres de formatação para validar apenas os dígitos
+  const cleanCep = cep.replace(/\D/g, '');
+  
+  // Valida se tem exatamente 8 dígitos
+  if (cleanCep.length !== 8) {
+    return ERROR_MESSAGES['cep.invalid'];
+  }
+  
   return null;
 };
 

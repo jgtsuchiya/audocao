@@ -54,7 +54,7 @@ export const OWNERSHIP_TYPES = [
   { value: 'rented', label: 'Alugada' },
 ];
 
-export const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
+export const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#.])[A-Za-z\d@$!%*?&#.]{8,}$/;
 export const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 export const PHONE_REGEX = /^\(\d{2}\) \d{4,5}-\d{4}$/;
 export const CPF_REGEX = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
