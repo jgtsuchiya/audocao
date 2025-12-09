@@ -1,0 +1,155 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.pageHeader {
+  margin-bottom: 2rem;
+}
+
+.pageHeader h1 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-top: 1rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+}
+
+.emptyState h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.emptyState p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.processesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.processCard {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  align-items: center;
+}
+
+.processImage {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  flex-shrink: 0;
+}
+
+.processInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.processInfo h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.donorName {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.dates {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  width: fit-content;
+}
+
+.statusPending {
+  background-color: #fff7e6;
+  color: #fa8c16;
+}
+
+.statusApproved {
+  background-color: #f6ffed;
+  color: #52c41a;
+}
+
+.statusRejected {
+  background-color: #fff1f0;
+  color: #ff4d4f;
+}
+
+.processActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .processCard {
+    grid-template-columns: 1fr;
+  }
+
+  .processImage {
+    width: 100%;
+    height: 200px;
+  }
+
+  .processActions {
+    flex-direction: row;
+  }
+}

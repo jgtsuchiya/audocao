@@ -23,23 +23,38 @@ export default function LoginPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const emailErr = validateEmail(email);
-    const passwordErr = validateRequired(password);
+    // Validate fields
+    let hasError = false;
 
-    setEmailError(emailErr || '');
-    setPasswordError(passwordErr || '');
-
-    if (emailErr || passwordErr) {
-      return;
+    const emailValidation = validateEmail(email);
+    if (emailValidation) {
+      setEmailError(emailValidation);
+      hasError = true;
+    } else {
+      setEmailError('');
     }
+
+    const passwordValidation = validateRequired(password);
+    if (passwordValidation) {
+      setPasswordError(passwordValidation);
+      hasError = true;
+    } else {
+      setPasswordError('');
+    }
+
+    if (hasError) return;
 
     setLoading(true);
 
     try {
-      const token = await MockAuthRepository.login({ email, password });
+      console.log('Tentando fazer login com:', email);
+      const result = await MockAuthRepository.login({ email, password });
+      console.log('Login bem-sucedido:', result);
       message.success('Login realizado com sucesso!');
-      router.push('/');
+      console.log('Navegando para /home');
+      router.push('/home');
     } catch (error: any) {
+      console.error('Erro no login:', error);
       message.error(error.message || 'Erro ao fazer login');
     } finally {
       setLoading(false);

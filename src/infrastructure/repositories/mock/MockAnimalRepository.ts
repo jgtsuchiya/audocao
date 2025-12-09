@@ -193,6 +193,30 @@ export class MockAnimalRepository {
     LocalStorageService.setItem(ADOPTION_REQUESTS_KEY, requests);
   }
 
+  static async findAllIncludingAdopted(filters?: AnimalFilters): Promise<Animal[]> {
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    
+    let animals = this.getAnimals();
+
+    if (filters) {
+      if (filters.type) {
+        animals = animals.filter((animal) => animal.type === filters.type);
+      }
+      if (filters.age) {
+        animals = animals.filter((animal) => animal.age === filters.age);
+      }
+      if (filters.size) {
+        animals = animals.filter((animal) => animal.size === filters.size);
+      }
+      if (filters.gender) {
+        animals = animals.filter((animal) => animal.gender === filters.gender);
+      }
+    }
+
+    // Return all animals including adopted ones
+    return animals;
+  }
+
   static async findAll(filters?: AnimalFilters): Promise<Animal[]> {
     await new Promise((resolve) => setTimeout(resolve, 500));
     

@@ -8,11 +8,13 @@ import styles from './Button.module.css';
 export interface ButtonProps extends Omit<AntButtonProps, 'type'> {
   variant?: 'primary' | 'secondary' | 'tertiary';
   fullWidth?: boolean;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   fullWidth = false,
+  type = 'button',
   children,
   className,
   ...props
@@ -33,6 +35,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <AntButton
       type={getButtonType()}
+      htmlType={type}
       className={`${styles.button} ${fullWidth ? styles.fullWidth : ''} ${className || ''}`}
       {...props}
     >

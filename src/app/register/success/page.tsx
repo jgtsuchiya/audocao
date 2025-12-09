@@ -58,7 +58,7 @@ export default function SuccessPage() {
                   Voltar para início
                 </Button>
               </Link>
-              <Link href="/animals">
+              <Link href="/adoption">
                 <Button variant="primary" size="large">
                   Conhecer animais disponíveis
                 </Button>

@@ -1,0 +1,240 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  max-width: 800px;
+}
+
+.successCard {
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 3rem 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.5s ease-out;
+}
+
+.successCard.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.iconWrapper {
+  margin-bottom: 2rem;
+}
+
+.successIcon {
+  font-size: 6rem;
+  color: #10b981;
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.message {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.infoBox {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  display: flex;
+  gap: 1.5rem;
+  border: 2px solid #bae6fd;
+}
+
+.infoIcon {
+  font-size: 2.5rem;
+  color: #0284c7;
+  flex-shrink: 0;
+}
+
+.infoContent h3 {
+  font-size: 1.3rem;
+  color: #0c4a6e;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.infoContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoContent li {
+  padding: 0.5rem 0;
+  color: #0369a1;
+  font-size: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.infoContent li::before {
+  content: "✓";
+  color: #0284c7;
+  font-weight: bold;
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.tips {
+  margin-bottom: 2.5rem;
+}
+
+.tipsTitle {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.tipsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.tipCard {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  transition: transform 0.2s;
+}
+
+.tipCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tipEmoji {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.tipCard p {
+  margin: 0;
+  color: #4b5563;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.actionButton {
+  min-width: 200px;
+}
+
+.footer {
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer p {
+  color: #6b7280;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.footer a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .successCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .successIcon {
+    font-size: 4rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  .infoBox {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .infoIcon {
+    font-size: 2rem;
+  }
+
+  .infoContent h3 {
+    font-size: 1.1rem;
+  }
+
+  .infoContent li {
+    font-size: 0.9rem;
+  }
+
+  .tipsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actionButton {
+    width: 100%;
+  }
+
+  .tipEmoji {
+    font-size: 2rem;
+  }
+}

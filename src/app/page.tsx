@@ -1,7 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { 
   HeartOutlined, 
   HomeOutlined, 
@@ -12,9 +13,23 @@ import {
 } from '@ant-design/icons';
 import { Button } from '@/presentation/components/atoms/Button';
 import { Logo } from '@/presentation/components/atoms/Logo';
+import { useAuth } from '@/presentation/hooks/useAuth';
 import styles from './page.module.css';
 
 export default function HomePage() {
+  const router = useRouter();
+  const { isAuthenticated, loading } = useAuth();
+
+  useEffect(() => {
+    if (!loading && isAuthenticated) {
+      router.push('/home');
+    }
+  }, [isAuthenticated, loading, router]);
+
+  if (loading) {
+    return null;
+  }
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>

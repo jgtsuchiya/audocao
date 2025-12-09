@@ -56,7 +56,7 @@ export default function AnimalDetailsPage() {
   }, [loadAnimal]);
 
   const handleAdopt = () => {
-    router.push(`/adoption/${params.id}/adopt`);
+    router.push(`/adoption/${params.id}/schedule`);
   };
 
   const handleGoBack = () => {

@@ -1,0 +1,182 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem 1rem;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto 1rem;
+}
+
+.backButton {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.backButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.titleCard {
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.titleIcon {
+  font-size: 3rem;
+  color: #667eea;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0.5rem 0 0;
+}
+
+.calendarCard,
+.timeCard {
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  min-height: 500px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.infoAlert {
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+.calendar {
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.selectedInfo {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f0f9ff;
+  border-left: 4px solid #0ea5e9;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #0369a1;
+}
+
+.checkIcon {
+  color: #0ea5e9;
+  font-size: 1.2rem;
+}
+
+.timeDescription {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.timePickerWrapper {
+  margin: 2rem 0;
+}
+
+.timePicker {
+  width: 100%;
+  height: 50px;
+  font-size: 1.1rem;
+}
+
+.summaryAlert {
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+.summaryAlert p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.actionSection {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.actionSection button {
+  min-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+
+  .titleSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .titleIcon {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .actionSection {
+    flex-direction: column;
+  }
+
+  .actionSection button {
+    width: 100%;
+  }
+
+  .calendarCard,
+  .timeCard {
+    min-height: auto;
+  }
+}
