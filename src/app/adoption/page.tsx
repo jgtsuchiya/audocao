@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import { Row, Col, Spin, Empty, Tag } from 'antd';
-import { HeartOutlined, FilterOutlined, CheckCircleOutlined, MedicineBoxOutlined } from '@ant-design/icons';
+import { HeartOutlined, FilterOutlined, CheckCircleOutlined, MedicineBoxOutlined, ArrowLeftOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card } from '@/presentation/components/atoms/Card';
@@ -19,6 +20,7 @@ import {
 import styles from './page.module.css';
 
 export default function AdoptionPage() {
+  const router = useRouter();
   const [animals, setAnimals] = useState<Animal[]>([]);
   const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState<AnimalFilters>({});
@@ -61,6 +63,15 @@ export default function AdoptionPage() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
+        <Button
+          variant="tertiary"
+          icon={<ArrowLeftOutlined />}
+          onClick={() => router.push('/home')}
+          style={{ marginBottom: '16px', border: '2px solid white', color: 'white' }}
+          aria-label="Voltar para home"
+        >
+          Voltar
+        </Button>
         <div className={styles.headerContent}>
           <HeartOutlined className={styles.headerIcon} />
           <div>

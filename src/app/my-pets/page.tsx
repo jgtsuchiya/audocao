@@ -101,7 +101,7 @@ export default function MyPetsPage() {
       <main className={styles.main}>
         <div className={styles.pageHeader}>
           <div>
-            <Button variant="tertiary" onClick={() => router.back()}>
+            <Button variant="tertiary" onClick={() => router.back()} style={{ border: '2px solid white', color: 'white' }}>
               <ArrowLeftOutlined /> Voltar
             </Button>
             <h1>Meus Pets</h1>

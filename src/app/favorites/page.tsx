@@ -74,7 +74,7 @@ export default function FavoritesPage() {
 
       <main className={styles.main}>
         <div className={styles.pageHeader}>
-          <Button variant="tertiary" onClick={() => router.back()}>
+          <Button variant="tertiary" onClick={() => router.back()} style={{ border: '2px solid white', color: 'white' }}>
             <ArrowLeftOutlined /> Voltar
           </Button>
           <h1><HeartFilled style={{ color: '#ff4d4f' }} /> Meus Favoritos</h1>

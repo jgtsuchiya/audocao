@@ -35,6 +35,24 @@
   align-items: center;
 }
 
+.loginLink {
+  color: #262626;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+}
+
+.loginLink:hover {
+  color: #1890ff;
+}
+
+.loginLink:focus-visible {
+  outline: 2px solid #1890ff;
+  outline-offset: 2px;
+}
+
 .navLink {
   color: #262626;
   font-size: 16px;
@@ -90,6 +108,49 @@
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.primaryActionButton {
+  background: white;
+  color: #ff4d4f;
+  border: none;
+  padding: 20px 48px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.primaryActionButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  background: #fff5f5;
+}
+
+.primaryActionButton:active {
+  transform: translateY(-2px);
+}
+
+.heartIcon {
+  font-size: 28px;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(1.15);
+  }
+  20%, 40% {
+    transform: scale(1);
+  }
 }
 
 .features {
@@ -180,7 +241,16 @@
   }
 
   .nav {
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .primaryActionButton {
+    font-size: 18px;
+    padding: 16px 32px;
+  }
+
+  .heartIcon {
+    font-size: 24px;
   }
 }

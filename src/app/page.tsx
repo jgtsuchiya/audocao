@@ -6,10 +6,7 @@ import { useRouter } from 'next/navigation';
 import { 
   HeartOutlined, 
   HomeOutlined, 
-  InfoCircleOutlined,
   SafetyOutlined,
-  SmileOutlined,
-  CheckCircleOutlined
 } from '@ant-design/icons';
 import { Button } from '@/presentation/components/atoms/Button';
 import { Logo } from '@/presentation/components/atoms/Logo';
@@ -32,24 +29,6 @@ export default function HomePage() {
 
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.headerContent}>
-          <Logo size="medium" variant="both" />
-          <nav className={styles.nav}>
-            <Link href="/adoption" className={styles.navLink}>
-              <HeartOutlined style={{ marginRight: 4 }} />
-              Adote
-            </Link>
-            <Link href="/login">
-              <Button variant="secondary">Entrar</Button>
-            </Link>
-            <Link href="/register/select-type">
-              <Button variant="primary">Cadastrar-se</Button>
-            </Link>
-          </nav>
-        </div>
-      </header>
-
       <main className={styles.main}>
         <section className={styles.hero}>
           <div className={styles.heroContent}>
@@ -62,14 +41,10 @@ export default function HomePage() {
             </p>
             <div className={styles.heroActions}>
               <Link href="/adoption">
-                <Button size="large" variant="primary">
+                <button className={styles.primaryActionButton}>
+                  <HeartOutlined className={styles.heartIcon} />
                   Ver Animais para Adoção
-                </Button>
-              </Link>
-              <Link href="/register/select-type">
-                <Button size="large" variant="secondary">
-                  Cadastrar-se
-                </Button>
+                </button>
               </Link>
             </div>
           </div>
@@ -87,9 +62,6 @@ export default function HomePage() {
                 Encontre seu novo melhor amigo entre diversos animais disponíveis para adoção.
                 Filtre por espécie, idade, tamanho e localização.
               </p>
-              <Link href="/adoption">
-                <Button variant="tertiary">Quero adotar →</Button>
-              </Link>
             </div>
 
             <div className={styles.featureCard}>
@@ -101,9 +73,6 @@ export default function HomePage() {
                 Cadastre animais para adoção e ajude a encontrar um lar amoroso. Instituições e
                 pessoas físicas são bem-vindas.
               </p>
-              <Link href="/register/select-type">
-                <Button variant="tertiary">Quero doar →</Button>
-              </Link>
             </div>
 
             <div className={styles.featureCard}>

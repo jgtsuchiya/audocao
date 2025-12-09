@@ -107,6 +107,7 @@ export default function ScheduleVisitPage() {
           icon={<ArrowLeftOutlined />}
           onClick={handleGoBack}
           className={styles.backButton}
+          style={{ border: '2px solid white', color: 'white' }}
           aria-label="Voltar para detalhes"
         >
           Voltar

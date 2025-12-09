@@ -400,11 +400,15 @@ export default function RegisterAdopterPage() {
           )}
 
           <div className={styles.actions}>
-            {step > 1 && (
+            {step === 1 ? (
+              <Button variant="secondary" size="large" onClick={() => router.push('/register/select-type')}>
+                Voltar
+              </Button>
+            ) : step > 1 ? (
               <Button variant="secondary" size="large" onClick={handleBack}>
                 Voltar
               </Button>
-            )}
+            ) : null}
             {step < 4 ? (
               <Button variant="primary" size="large" onClick={handleNext}>
                 Próximo

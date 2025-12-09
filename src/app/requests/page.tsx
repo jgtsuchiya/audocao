@@ -146,7 +146,7 @@ export default function RequestsPage() {
 
       <main className={styles.main}>
         <div className={styles.pageHeader}>
-          <Button variant="tertiary" onClick={() => router.back()}>
+          <Button variant="tertiary" onClick={() => router.back()} style={{ border: '2px solid white', color: 'white' }}>
             <ArrowLeftOutlined /> Voltar
           </Button>
           <h1>Solicitações de Adoção</h1>

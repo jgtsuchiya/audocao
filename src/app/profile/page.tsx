@@ -308,7 +308,7 @@ export default function ProfilePage() {
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <Logo size="small" variant="both" />
-          <Button variant="secondary" onClick={() => router.push('/home')}>
+          <Button variant="secondary" onClick={() => router.push('/home')} style={{ border: '2px solid white', color: 'white' }}>
             Voltar
           </Button>
         </div>

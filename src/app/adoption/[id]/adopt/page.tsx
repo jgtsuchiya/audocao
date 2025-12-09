@@ -291,6 +291,7 @@ export default function AdoptFormPage() {
           icon={<ArrowLeftOutlined />}
           onClick={handleGoBack}
           className={styles.backButton}
+          style={{ border: '2px solid white', color: 'white' }}
           aria-label="Voltar para detalhes do animal"
         >
           Voltar

@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Input, InputPassword } from '@/presentation/components/atoms/Input';
 import { Button } from '@/presentation/components/atoms/Button';
-import { Logo } from '@/presentation/components/atoms/Logo';
 import { MockAuthRepository } from '@/infrastructure/repositories/mock/MockAuthRepository';
 import { validateEmail, validateRequired } from '@/shared/utils/validators';
 import { message } from 'antd';
@@ -65,10 +64,6 @@ export default function LoginPage() {
     <div className={styles.container}>
       <div className={styles.formWrapper}>
         <div className={styles.formCard}>
-          <Link href="/" className={styles.logoLink}>
-            <Logo size="medium" variant="both" />
-          </Link>
-
           <h1 className={styles.title}>
             <LockOutlined style={{ marginRight: 8 }} />
             Entrar
@@ -124,6 +119,9 @@ export default function LoginPage() {
                 Cadastre-se
               </Link>
             </p>
+            <Link href="/" className={styles.link} style={{ display: 'block', textAlign: 'center', marginTop: '16px' }}>
+              ← Voltar para página inicial
+            </Link>
           </div>
 
           <div className={styles.demo}>
